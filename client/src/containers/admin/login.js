@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+//import user from '../../../../server/models/user';
 import { loginUser} from '../../actions'
 
 class Login extends Component {
@@ -34,12 +35,6 @@ class Login extends Component {
         this.props.dispatch(loginUser(this.state))
     }
 
-    emptyPasswordInput = () =>{
-        this.setState ({
-            password:''
-        })
-    }
-
     render() {
         let user = this.props.user;
         return (
@@ -61,7 +56,7 @@ class Login extends Component {
                             type="password"
                             placeholder="Enter your password"
                             value={this.state.password}
-                            onChange={this.handlePassword}
+                            onChange={(event) => this.handlePassword(event)}
                         />
                     </div>
 

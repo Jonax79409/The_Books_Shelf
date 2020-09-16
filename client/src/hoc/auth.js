@@ -27,7 +27,6 @@ export default function(ComposedClass, reload) {
                 if (reload === false) {
                     this.props.history.push('./user')
                 }
-
             }
 
         }
