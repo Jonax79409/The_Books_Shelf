@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { getBookWithReviewer } from '../../actions'
+import { getBookWithReviewer, clearBookWithReviewer } from '../../actions'
 import { connect } from 'react-redux';
 
 class BookView extends Component {
 
     componentWillMount () {
         this.props.dispatch(getBookWithReviewer(this.props.match.params.id))
+    }
+
+    componentWillUnmount() {
+        this.props.dispatch(clearBookWithReviewer())
     }
 
     renderBook = (books) => (
@@ -54,5 +58,7 @@ function mapStateToProps(state) {
         books : state.books
     }
 }
+
+
 
 export default connect (mapStateToProps)(BookView)

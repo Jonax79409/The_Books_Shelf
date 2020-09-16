@@ -45,3 +45,39 @@ export function getBookWithReviewer (id) {
     }
 
 }
+
+export function clearBookWithReviewer() {
+    return {
+        type: 'CLEAR_BOOK_W_REVIEWVER',
+        payload: {
+            book:{},
+            reviewer:{}
+        }
+    }
+}
+
+/*========== USER ==========*/
+
+export function loginUser({email,password}) {
+
+    const request = axios.post('/api/login', {email,password})
+                        .then(response => {
+                            return response.data
+                        })
+
+    return {
+        type: 'USER_LOGIN',
+        payload:request
+    }
+}
+
+export function auth() {
+    const request = axios.get('/api/auth')
+                        .then(response => {
+                            return response.data
+                        })
+    return {
+        type: 'USER_AUTH',
+        payload: request
+    }
+}

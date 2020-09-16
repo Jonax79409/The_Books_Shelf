@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
  const BookItem = (item) => {
     return(
-        <Link to={`/${item._id}`} className="book_item">
+        <Link to={`/books/${item._id}`} className="book_item">
             <div className="book_header">
                 <h2>{item.name}</h2>
             </div>
@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
                 </div>
 
                 <div className="book_bubble rating">
-                    <strong>Rating</strong>{item.rating}
+                    <strong>Rating</strong> {item.rating}
                 </div>
 
             </div>
