@@ -35,6 +35,13 @@ const SidenavItems = () => {
             restricted: false
         },
         {
+            type:'navItem',
+            icon:'file-text-o',
+            text:'My reviews',
+            link:'/user/user-posts',
+            restricted:true
+        },
+        {
             type: 'navItem',
             icon:'file-text-o',
             text:'Add reviews',

@@ -165,7 +165,9 @@ header .navItem span {
     font-size: 20px;
     border: 1px solid #e1e1e1;
 }
-
+.button {
+    cursor : pointer
+}
 .rl_container button {
     font-size: 20px;
     padding: 10px 52px;
