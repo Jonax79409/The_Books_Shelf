@@ -82,7 +82,6 @@ const SidenavItems = ({user}) => {
                 : null
             }
             
-            return element(item,i)
         })
         :null
     )
