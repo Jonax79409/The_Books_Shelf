@@ -10,11 +10,13 @@ mongoose.connect(config.DATABASE, { useNewUrlParser: true, useUnifiedTopology: t
 
 const { User } = require ('./models/user.js');
 const { Book } = require ('./models/book.js');
-const { auth } = require ('./middleware/auth.js')
+const { auth } = require ('./middleware/auth.js');
+const { get } = require('http');
 
 app.use(bodyParser.json());
 app.use(cookiesParser());
 
+app.use(express.static('client/build'))
 
 //GET
 
@@ -158,6 +160,13 @@ app.delete ('/api/delete_book', (req,res) => {
         res.json(true)
     })
 })
+
+if (process.env.NODE_ENV === 'production') {
+    const path = require ('path');
+    get.get('/*', (req,res) => {
+        res.sendfile(path.resolve(__dirname,'../client', 'build', 'index.html'))
+    })
+}
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
