@@ -37,7 +37,7 @@ class AddBook extends Component {
         return (
             book.post ?
             <div className="conf_link">
-                Cool!! <Link to={`/books/${book.bookId}`}>Click here to see the post</Link>
+                Cool!! <Link to={`/books/${book.bookID}`}>Click here to see the post</Link>
             </div>
             : null
         )
