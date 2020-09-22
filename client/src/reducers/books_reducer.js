@@ -38,7 +38,7 @@ export default function(state={}, action) {
             return {
                 ...state,
                 updateBook: action.payload.updateBook,
-                deleteBook: action.payload.deleteBook
+                postDeleted: action.payload.postDeleted
             }
         default : 
             return state;
