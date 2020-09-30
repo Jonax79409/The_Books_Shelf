@@ -25,6 +25,8 @@ $ npm install
 
 ### To start the Project 
 
+run the following command from root directory
+
 ```sh
 $ npm run dev
 ```
