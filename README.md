@@ -48,10 +48,6 @@ Open http://localhost:3000 to view it in the browser.
 │   │   ├── images
 │   │   │   └── avatar.png
 │   │   ├── index.html
-│   │   ├── logo192.png
-│   │   ├── logo512.png
-│   │   ├── manifest.json
-│   │   └── robots.txt
 │   ├── README.md
 │   └── src
 │       ├── actions
